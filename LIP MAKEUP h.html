@@ -26,95 +26,111 @@
 
     <body>
         <!--Navigation Bar-->
-         <nav class="navbar navbar-expand-md">
-      <div class="container-fluid">
-        <div class="row w-100">
-          <!--first column-->
-          <div class="col-lg-3 col-md-4 col-6 order-1">
-            <a class="navbar-brand" href="#">
-              <img src="LOGO%20ML.png" alt="" class="img-fluid" />
-            </a>
-          </div>
+          <nav class="navbar navbar-expand-md navbar-dark bg-black">
+  <div class="container-fluid">
 
-          <!--second column-->
-          <div class="col-lg-9 col-md-8 order-3 order-md-2 d-flex justify-content-end align-items-center">
-            <div
-              class="offcanvas offcanvas-start"
-              tabindex="-1"
-              id="offcanvasNavbar"
-              aria-labelledby="offcanvasNavbarLabel">
-              <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-              </div>
+    <!-- LOGO -->
+    <a class="navbar-brand" href="index.html">
+      <img src="LOGO%20ML.png" alt="Logo" class="img-fluid" style="max-height: 60px;">
+    </a>
 
-               <div class="offcanvas-body">
-    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-        
-        <li class="nav-item dropdown custom-hover">
-            <a class="btn custom-btn rounded-pill px-4 py-2 dropdown-toggle" 
-               href="index.html" 
-               role="button">
-                HOME
-            </a>
-            <ul class="dropdown-menu">
-                <li>
-                    <a class="dropdown-item pink-link" href="BRAND.html">BRAND SERVICE</a>
-                </li>
-            </ul>
-        </li>
+    <!-- ☰ Mobile button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <li class="nav-item">
-            <a href="contacts%20us.html" class="btn custom-btn rounded-pill px-4 py-2">CONTACT</a>
-        </li>
+    <!-- Offcanvas -->
+    <div
+      class="offcanvas offcanvas-end text-bg-dark"
+      tabindex="-1"
+      id="offcanvasNavbar">
 
-        <li class="nav-item dropdown">
-            <a
-                class="btn custom-btn rounded-pill px-4 py-2 dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false">
-                PRODUCT
-            </a>
-
-            <ul class="dropdown-menu">
-                <li>
-                    <a class="dropdown-item" href="category page.html">BASE MAKEUP</a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="EYE%20MAKEUP%20.html">EYE MAKEUP</a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="LIP%20MAKEUP.html">LIP MAKEUP</a>
-                </li>
-                <li><a class="dropdown-item" href="CHEEK.html">CHEEK</a></li>
-            </ul>
-        </li>
-
-        <li class="nav-item">
-            <a href="About%20Us.html" class="btn custom-btn rounded-pill px-4 py-2">ABOUT US</a>
-        </li>
-
-        <li class="nav-item dropdown custom-hover">
-            <a class="btn custom-btn rounded-pill px-4 py-2 dropdown-toggle" 
-               href="FAQ.html" 
-               role="button">
-                FAQ
-            </a>
-            <ul class="dropdown-menu">
-                <li>
-                    <a class="dropdown-item pink-link" href="REVIEW.html">REVIEW</a>
-                </li>
-            </ul>
-        </li>
-    </ul>
-</div>
-            </div>
-          </div>
-        </div>
+      <!-- Offcanvas header（手机才看到） -->
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Menu</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
       </div>
-    </nav>
+
+      <!-- Menu -->
+      <div class="offcanvas-body">
+        <ul class="navbar-nav ms-auto align-items-md-center gap-2">
+
+          <!-- HOME -->
+         <li class="nav-item dropdown">
+  <a class="btn custom-btn rounded-pill px-4 py-2 dropdown-toggle"
+     href="#"
+     role="button"
+     data-bs-toggle="dropdown"
+     aria-expanded="false">
+    HOME
+  </a>
+  <ul class="dropdown-menu">
+    <li>
+      <a class="dropdown-item pink-link" href="BRAND.html">BRAND SERVICE</a>
+    </li>
+  </ul>
+</li>
+
+
+          <!-- PRODUCT dropdown -->
+          <li class="nav-item dropdown">
+            <a
+              class="btn custom-btn rounded-pill px-4 py-2 dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown">
+              PRODUCT
+            </a>
+
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="category%20page.html">BASE MAKEUP</a></li>
+              <li><a class="dropdown-item" href="EYE%20MAKEUP%20.html">EYE MAKEUP</a></li>
+              <li><a class="dropdown-item" href="LIP%20MAKEUP.html">LIP MAKEUP</a></li>
+              <li><a class="dropdown-item" href="CHEEK.html">CHEEK</a></li>
+            </ul>
+          </li>
+
+          <!-- ABOUT -->
+          <li class="nav-item">
+            <a href="About%20Us.html" class="btn custom-btn rounded-pill px-4 py-2">
+              ABOUT US
+            </a>
+          </li>
+
+          <!-- CONTACT -->
+          <li class="nav-item">
+            <a href="contacts%20us.html" class="btn custom-btn rounded-pill px-4 py-2">
+              CONTACT
+            </a>
+          </li>
+
+          <!-- FAQ -->
+         <li class="nav-item dropdown">
+  <a class="btn custom-btn rounded-pill px-4 py-2 dropdown-toggle"
+     href="#"
+     role="button"
+     data-bs-toggle="dropdown"
+     aria-expanded="false">
+    FAQ
+  </a>
+  <ul class="dropdown-menu">
+    <li>
+      <a class="dropdown-item pink-link" href="REVIEW.html">REVIEW</a>
+    </li>
+  </ul>
+</li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
         <!-- 第一行：图片 + 内容 -->
         <section class="lipstick-section">
         <div class="row align-items-center mb-5 product-detail-row">

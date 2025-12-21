@@ -618,12 +618,7 @@ color: #FFA0C6; /* Change the color of the `<p>` element */
 /* navbar到这里结束啦yeahhh */
 
 /* 1. 只有 HOME 和 FAQ 使用悬停显示，不碰 PRODUCT */
-@media (min-width: 992px) {
-    .custom-hover:hover .dropdown-menu {
-        display: block !important;
-        margin-top: 0;
-    }
-}
+
 
 /* 2. 针对 BRAND SERVICE 和 REVIEW 的点击颜色 */
 /* 当鼠标按下去的一瞬间，以及点击后获得焦点时变粉色 */
@@ -690,4 +685,12 @@ color: #FFA0C6; /* Change the color of the `<p>` element */
         font-size: 16px;
         padding: 20px;
     }
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1); /* 白色 ☰ */
 }
