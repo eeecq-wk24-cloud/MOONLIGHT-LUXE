@@ -269,6 +269,11 @@ font-size: 24px;
 }
 
 
+
+
+
+
+
 .company-btn {
     display: inline-block;        /* 不要 block，避免拉长 */
     width: auto;                  /* ✅ 关键：不要固定宽 */
@@ -303,10 +308,10 @@ font-family: "Libre Baskerville", serif;
   font-size: 30px;
 }
 
-.footer p {
-  color: #FFA0C6;
+p {
+ font-family: 'Playfair Display', serif;
+  font-size: 24px;
 }
-
 
 
 :root {
@@ -337,9 +342,10 @@ font-family: "Libre Baskerville", serif;
 h5 {
 color: #EBDCFD; /
 }
-p {
-color: #FFA0C6; /* Change the color of the `<p>` element */
+.footer p {
+  color: #FFA0C6;
 }
+
 
 
 /* section lip */
@@ -367,4 +373,5 @@ color: #FFA0C6; /* Change the color of the `<p>` element */
     z-index: 2;           /* 确保在 banner 上方 */
     margin-top: -22%;     
 }
+
 
