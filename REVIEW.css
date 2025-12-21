@@ -1,0 +1,371 @@
+css.custom-btn {
+    font-family: 'Playfair Display', serif; /* 使用 Google Font */
+  font-size: 20px;
+}
+h5 {
+font-family: "Libre Baskerville", serif;
+  font-size: 30px;
+}
+
+p {
+ font-family: 'Playfair Display', serif;
+  font-size: 24px;
+}
+
+
+body {
+ margin: 0;
+  min-height: 100vh;
+  /* 平滑渐变：从纯黑到灰色 */
+  background: linear-gradient(to bottom, #000000, #666666);
+}
+
+.navbar {
+  background-color: black; /* 半透明黑色背景 */
+}
+
+
+/* 1. 修复之前 h5 里的斜杠错误，防止 CSS 断开 */
+
+
+/* 2. 导航栏按钮的基础颜色 (确保文字可见) */
+.custom-btn {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: #ffffff !important; /* 强制文字白色 */
+    background-color: transparent;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+/* 3. 鼠标悬停效果：背景变粉色，文字变黑 */
+.custom-btn:hover {
+    background-color: #FF9CC6 !important; 
+    color: #000000 !important;
+}
+
+/* 4. 强制 Offcanvas 在大屏幕显示 (修复功能无效的关键) */
+@media (min-width: 768px) {
+    .offcanvas {
+        visibility: visible !important;
+        transform: none !important;
+        position: static !important;
+        background: transparent !important;
+        width: auto !important;
+    }
+    .offcanvas-header {
+        display: none;
+    }
+    .offcanvas-body {
+        padding: 0;
+    }
+}
+
+/* 5. 侧边栏模式下的背景 (手机端) */
+.offcanvas {
+    background-color: #000000 !important; /* 抽屉背景设为黑色 */
+}
+
+
+.email-box {
+  width: 405px;        
+}
+
+.email-box .form-control {
+  border-radius: 24px; 
+     padding: 14px 18px;
+    
+}
+.custom-btn {
+    font-family: 'Playfair Display', serif; /* 使用 Google Font */
+  font-size: 20px;
+}
+
+.company-btn {
+    display: block;            /* 每个按钮独占一行 */
+    width: 150px;              /* 改成你想要的短宽度 */
+    margin: 10px auto;          /* 居中并加间距 */
+    text-align: center;
+    padding: 6px 12px;         /* 按钮内边距 */
+    border-radius: 50px;       /* 圆角按钮 */
+    background-color: transparent;
+    color: #FFBADA;               /* 默认文字白色 */
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+}
+
+/* hover / 点击效果 */
+.company-btn:hover,
+.company-btn:active {
+    background-color: #EBDCFD; /* 背景粉色 */
+    color: #000000;             /* 字体紫色 */
+    border-color: #FFBADA;
+}
+
+h5 {
+font-family: "Libre Baskerville", serif;
+  font-size: 30px;
+}
+
+p {
+ font-family: 'Playfair Display', serif;
+  font-size: 24px;
+}
+
+
+
+:root {
+    --purple: #000000;
+    --blue: rgba(0, 0, 0, 0.96);
+    color: #ffffff;
+}
+.email-box {
+  width: 405px;        
+}
+
+.email-box .form-control {
+  border-radius: 24px; 
+     padding: 14px 18px;
+}
+
+
+
+.btn-custom {
+    background-color: var(--purple);
+    color: purple;
+}
+  
+.footer {
+    background-color: var(--blue);
+    color: #ffffff;
+}
+h5 {
+color: #EBDCFD; /
+}
+p {
+color: #FFA0C6; /* Change the color of the `<p>` element */
+}
+
+
+/* section lip */
+.lipstick-section {
+  margin-bottom: 370px;
+}
+
+.footer {
+  position: relative;
+  margin-top: 0;
+  padding-top: 60px;
+}
+
+body {
+    /* 这里的角度可以是 180deg (从上到下) */
+    background: linear-gradient(180deg, #FFBADA 0%, #805D6D 50%, #000000 100%);
+    background-attachment: fixed; /* 关键：确保滚动页面时背景固定不动 */
+    min-height: 100vh;           /* 确保背景至少占满整个屏幕高度 */
+    margin: 0;
+}
+
+.section-banner {
+    min-height: 600px; /* 或者你图片的高度 */
+}
+
+/* 评论卡片容器 */
+/* 评论卡片：匹配 Figma 460x294 */
+.comment-card {
+    background-color: #FFBADA; /* 照片中的粉色 */
+    width: 460px;               /* Figma 宽度 */
+    height: 294px;              /* Figma 高度 */
+    border-radius: 60px;        /* 照片中非常圆润的角度 */
+    padding: 40px;              /* 增加内边距，让内容不拥挤 */
+    color: #000;
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.3); /* 增强立体感阴影 */
+    
+    /* 使用 flex 布局让内容垂直分布 */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+    /* 保持卡片在容器中居中 */
+    margin: 0 auto; 
+    transition: transform 0.3s ease;
+}
+
+/* 头像大小调整 */
+.comment-avatar {
+    width: 90px;                /* 增大头像，匹配大格子 */
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+   
+}
+
+/* 名字和星星的间距 */
+.comment-card h6 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;            /* 增大名字字号 */
+    font-weight: bold;
+}
+
+.rating-stars {
+    color: #FFD700;
+    font-size: 50px;            /* 增大星星尺寸 */
+   -webkit-text-stroke: 0.5px #ffffff;
+}
+
+/* 评论内容文字 */
+.comment-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px !important; /* 匹配大格子的字号 */
+    line-height: 1.6;
+    margin-top: 20px;
+    color: #000 !important;
+}
+
+/* 让 section2 有足够的上下空间 */
+.section2 {
+    padding: 100px 0;
+    min-height: 800px;
+}
+.section2 {
+    overflow-x: hidden; /* 防止动画划出屏幕时出现滚动条 */
+}
+
+.custom-btn {
+    background-color: transparent; /* 默认透明 */
+    color: white; /* 字体白色 */
+    border: none; /* 没有边框 */
+    transition: background-color 0.3s, color 0.3s; /* 平滑过渡效果 */
+}
+
+.custom-btn:hover {
+    background-color: #FF9CC6; /* 鼠标悬停时背景色 */
+    color: black; /* 字体颜色变黑，和背景形成对比 */
+}
+
+/* dropdown 整体 */
+.dropdown-menu {
+  background-color: #000;
+  border-radius: 0;
+  padding: 0;
+  border: none;
+  min-width: 220px;
+}
+
+/* dropdown item 默认 */
+.dropdown-item {
+  color: #fff;
+  background-color: transparent;
+  padding: 14px 20px;
+  padding-left: 24px;   /* 对齐 PRODUCT */
+  text-align: left;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+/* hover / active */
+.dropdown-item:hover,
+.dropdown-item:focus,
+.dropdown-item.active {
+  background-color: #000;
+  color: #ff9cc6;
+}
+
+/* 防止 bootstrap active 变白 */
+.dropdown-item:active {
+  background-color: #000 !important;
+  color: #ff9cc6 !important;
+}
+
+/* PRODUCT 打开时高亮 */
+.nav-item.dropdown.show > .custom-btn {
+  background-color: #ff9cc6;
+  color: black;
+}
+
+/* 移除箭头 */
+.dropdown-toggle::after {
+  display: none;
+}
+
+/* 当 dropdown 展开时，让 PRODUCT 变白色 */
+.dropdown-toggle.show {
+  background-color: #ff9cc6;
+  color: black !important;
+}
+
+.navbar .custom-btn  {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 400; /* regular = 400 */
+}
+
+.dropdown-item {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+}
+
+/* navbar到这里结束啦yeahhh */
+
+/* 1. 只有 HOME 和 FAQ 使用悬停显示，不碰 PRODUCT */
+@media (min-width: 992px) {
+    .custom-hover:hover .dropdown-menu {
+        display: block !important;
+        margin-top: 0;
+    }
+}
+
+/* 2. 针对 BRAND SERVICE 和 REVIEW 的点击颜色 */
+/* 当鼠标按下去的一瞬间，以及点击后获得焦点时变粉色 */
+.dropdown-item.pink-item:active,
+.dropdown-item.pink-item:focus {
+    background-color: #000 !important; /* 背景保持黑色 */
+    color: #FF9CC6 !important;        /* 文字变粉色 */
+}
+
+/* 如果你希望在 BRAND.html 页面时，那个字一直是粉色的 */
+/* 你需要在 BRAND.html 的代码里给那个 a 标签手动加上 active 类 */
+.dropdown-item.pink-item.active {
+    color: #FF9CC6 !important;
+    background-color: #000 !important;
+}
+/* COPY 到这里 */
+
+
+.footer {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 60px 0;
+    margin-top: 80px; /* 这里控制 Footer 与上方内容的距离 */
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    position: relative;
+    clear: both;      /* 确保它不会被浮动元素干扰 */
+}
+
+
+
+/* Desktop / Default */
+.class {
+    font-size: 20px;
+    padding: 40px;
+}
+
+/* iPad size */
+@media screen and (max-width: 991px) {
+    .class {
+        font-size: 18px;
+        padding: 30px;
+    }
+}
+
+/* iPhone size */
+@media screen and (max-width: 767px) {
+    .class {
+        font-size: 16px;
+        padding: 20px;
+    }
+}

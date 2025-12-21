@@ -1,0 +1,371 @@
+.custom-btn {
+    background-color: transparent; /* 默认透明 */
+    color: white; /* 字体白色 */
+    border: none; /* 没有边框 */
+    transition: background-color 0.3s, color 0.3s; /* 平滑过渡效果 */
+}
+
+.custom-btn:hover {
+    background-color: #FF9CC6; /* 鼠标悬停时背景色 */
+    color: black; /* 字体颜色变黑，和背景形成对比 */
+}
+
+/* dropdown 整体 */
+.dropdown-menu {
+  background-color: #000;
+  border-radius: 0;
+  padding: 0;
+  border: none;
+  min-width: 220px;
+}
+
+/* dropdown item 默认 */
+.dropdown-item {
+  color: #fff;
+  background-color: transparent;
+  padding: 14px 20px;
+  padding-left: 24px;   /* 对齐 PRODUCT */
+  text-align: left;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+/* hover / active */
+.dropdown-item:hover,
+.dropdown-item:focus,
+.dropdown-item.active {
+  background-color: #000;
+  color: #ff9cc6;
+}
+
+/* 防止 bootstrap active 变白 */
+.dropdown-item:active {
+  background-color: #000 !important;
+  color: #ff9cc6 !important;
+}
+
+/* PRODUCT 打开时高亮 */
+.nav-item.dropdown.show > .custom-btn {
+  background-color: #ff9cc6;
+  color: black;
+}
+
+/* 移除箭头 */
+.dropdown-toggle::after {
+  display: none;
+}
+
+/* 当 dropdown 展开时，让 PRODUCT 变白色 */
+.dropdown-toggle.show {
+  background-color: #ff9cc6;
+  color: black !important;
+}
+
+.navbar .custom-btn  {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 400; /* regular = 400 */
+}
+
+.dropdown-item {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+}
+
+/* navbar到这里结束啦yeahhh */
+/* 1. 只有 HOME 和 FAQ 使用悬停显示，不碰 PRODUCT */
+@media (min-width: 992px) {
+    .custom-hover:hover .dropdown-menu {
+        display: block !important;
+        margin-top: 0;
+    }
+}
+
+/* 2. 针对 BRAND SERVICE 和 REVIEW 的点击颜色 */
+/* 当鼠标按下去的一瞬间，以及点击后获得焦点时变粉色 */
+.dropdown-item.pink-item:active,
+.dropdown-item.pink-item:focus {
+    background-color: #000 !important; /* 背景保持黑色 */
+    color: #FF9CC6 !important;        /* 文字变粉色 */
+}
+
+/* 如果你希望在 BRAND.html 页面时，那个字一直是粉色的 */
+/* 你需要在 BRAND.html 的代码里给那个 a 标签手动加上 active 类 */
+.dropdown-item.pink-item.active {
+    color: #FF9CC6 !important;
+    background-color: #000 !important;
+}
+/* COPY 到这里 */
+
+body {
+  margin: 0;
+  background-image: url("products%20details%20page%20BG.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.navbar {
+  background-color: black;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+  padding: 6px 10px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  background-color: #ffbada;
+  color: black;
+}
+
+.active-nav {
+  background-color: #ffbada;
+  color: black;
+}
+
+  /* 内容 */
+.product-info {
+  padding-left: 30px;   /* 右边内容不要贴太近图片 */
+}
+
+.product-title {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.product-price {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.product-desc {
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.color-dots {
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width:50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.color-1 { background-color: #B07771; }
+.color-2 { background-color: #D78281; }
+.color-3 { background-color: #D38D7A; }
+.color-4 { background-color: #E59C95; }
+.color-5 { background-color: #E8BEA2; }
+.color-6 { background-color: #EED5CC; }
+.color-7 { background-color: #F77CA7; }
+.color-8 { background-color: #FF91B8; }
+    
+.product-detail-row {
+  margin-top: 40px; /* 调这个数字 */
+}
+
+.product-info {
+  padding-left: 100px;   /* 跟图片保持距离（你已经有） */
+  padding-right: 100px;  /* 右边留空间，不贴边 */
+}
+
+.colors {
+  margin: 80px 0;
+}
+
+.colors-title {
+  margin-bottom: 32px;
+}
+
+.section3 img:hover {
+  transform: scale(1.05);
+}
+
+.glide__slide img {
+  width: 100%;
+  border-radius: 24px;
+  margin-top: 40px;    /* 上面的空白 */
+  margin-bottom: 20px; 
+}
+
+.glide__slide img {
+  transition: transform 0.3s ease;
+}
+
+.glide__slide img:hover {
+  transform: scale(1.02); /* 很轻微 */
+}
+
+.product-title{
+  font-family: 'Playfair Display',serif; 
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.product-price{ 
+font-family: 'Playfair Display',serif; 
+font-size: 30px;
+  font-weight: regular;
+}
+
+.product-desc{
+  font-family: 'Playfair Display',serif; 
+font-size: 24px;
+  font-weight: regular;
+}
+
+.product-color p{
+   font-family: 'Playfair Display',serif; 
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.contact-btn {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.colors-title{
+   font-family: 'Playfair Display',serif; 
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.container h2{
+     font-family: 'Playfair Display',serif; 
+  font-size: 30px;
+  font-weight: bold;
+}
+
+
+/* Desktop / Default */
+.class {
+    font-size: 20px;
+    padding: 40px;
+}
+
+/* iPad size */
+@media screen and (max-width: 991px) {
+    .class {
+        font-size: 18px;
+        padding: 30px;
+    }
+}
+
+/* iPhone size */
+@media screen and (max-width: 767px) {
+    .class {
+        font-size: 16px;
+        padding: 20px;
+    }
+}
+
+
+.company-btn {
+    display: inline-block;        /* 不要 block，避免拉长 */
+    width: auto;                  /* ✅ 关键：不要固定宽 */
+    min-width: unset;             /* ✅ 干掉 bootstrap 最小宽 */
+    
+    padding: 8px 28px;            /* 控制胶囊大小（左右决定“短不短”） */
+    line-height: 1.2;             /* 防止变高 */
+
+    border-radius: 9999px;        /* ✅ 超大值 = 完美圆胶囊 */
+    background-color: transparent;
+    color: #FFBADA;
+
+    text-align: center;
+    text-decoration: none;
+    margin: 10px auto;
+
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.company-btn:hover,
+.company-btn:active {
+    background-color: #EBDCFD;
+    color: #000000;
+}
+
+
+
+h5 {
+font-family: "Libre Baskerville", serif;
+  font-size: 30px;
+}
+
+p {
+ font-family: 'Playfair Display', serif;
+  font-size: 24px;
+}
+
+
+:root {
+    --purple: #000000;
+    --blue: rgba(0, 0, 0, 0.96);
+    color: #ffffff;
+}
+.email-box {
+  width: 405px;        
+}
+
+.email-box .form-control {
+  border-radius: 24px; 
+     padding: 14px 18px;
+}
+
+
+
+.btn-custom {
+    background-color: var(--purple);
+    color: purple;
+}
+  
+.footer {
+    background-color: var(--blue);
+    color: #ffffff;
+}
+h5 {
+color: #EBDCFD; /
+}
+.footer p {
+  color: #FFA0C6;
+}
+
+/* section lip */
+.lipstick-section {
+  margin-bottom: 370px;
+}
+
+.footer {
+  position: relative;
+  margin-top: 0;
+  padding-top: 60px;
+}
+
+
+
+.footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 40px 0;
+  margin-top: 120px;   /* 拉开跟口红的距离 */
+  padding-top: 60px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    position: relative;   /* 保持默认文档流 */
+    z-index: 2;           /* 确保在 banner 上方 */
+    margin-top: -22%;     
+}
+

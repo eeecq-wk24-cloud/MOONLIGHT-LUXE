@@ -1,0 +1,451 @@
+.custom-btn {
+    background-color: transparent; /* 默认透明 */
+    color: white; /* 字体白色 */
+    border: none; /* 没有边框 */
+    transition: background-color 0.3s, color 0.3s; /* 平滑过渡效果 */
+}
+
+.custom-btn:hover {
+    background-color: #FF9CC6; /* 鼠标悬停时背景色 */
+    color: black; /* 字体颜色变黑，和背景形成对比 */
+}
+
+/* dropdown 整体 */
+.dropdown-menu {
+  background-color: #000;
+  border-radius: 0;
+  padding: 0;
+  border: none;
+  min-width: 220px;
+}
+
+/* dropdown item 默认 */
+.dropdown-item {
+  color: #fff;
+  background-color: transparent;
+  padding: 14px 20px;
+  padding-left: 24px;   /* 对齐 PRODUCT */
+  text-align: left;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+/* hover / active */
+.dropdown-item:hover,
+.dropdown-item:focus,
+.dropdown-item.active {
+  background-color: #000;
+  color: #ff9cc6;
+}
+
+/* 防止 bootstrap active 变白 */
+.dropdown-item:active {
+  background-color: #000 !important;
+  color: #ff9cc6 !important;
+}
+
+/* PRODUCT 打开时高亮 */
+.nav-item.dropdown.show > .custom-btn {
+  background-color: #ff9cc6;
+  color: black;
+}
+
+/* 移除箭头 */
+.dropdown-toggle::after {
+  display: none;
+}
+
+/* 当 dropdown 展开时，让 PRODUCT 变白色 */
+.dropdown-toggle.show {
+  background-color: #ff9cc6;
+  color: black !important;
+}
+
+.navbar .custom-btn  {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 400; /* regular = 400 */
+}
+
+.dropdown-item {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+}
+
+/* navbar到这里结束啦yeahhh */
+
+
+
+/* 1. 只有 HOME 和 FAQ 使用悬停显示，不碰 PRODUCT */
+@media (min-width: 992px) {
+    .custom-hover:hover .dropdown-menu {
+        display: block !important;
+        margin-top: 0;
+    }
+}
+
+/* 2. 针对 BRAND SERVICE 和 REVIEW 的点击颜色 */
+/* 当鼠标按下去的一瞬间，以及点击后获得焦点时变粉色 */
+.dropdown-item.pink-item:active,
+.dropdown-item.pink-item:focus {
+    background-color: #000 !important; /* 背景保持黑色 */
+    color: #FF9CC6 !important;        /* 文字变粉色 */
+}
+
+/* 如果你希望在 BRAND.html 页面时，那个字一直是粉色的 */
+/* 你需要在 BRAND.html 的代码里给那个 a 标签手动加上 active 类 */
+.dropdown-item.pink-item.active {
+    color: #FF9CC6 !important;
+    background-color: #000 !important;
+}
+/* COPY 到这里 */
+
+.custom-image-row {
+    margin-top: 80px; /* 根据你的需要调整数值 */
+    margin-bottom: 50px;
+}
+
+/* hover / 点击效果 */
+.company-btn:hover,
+.company-btn:active {
+    background-color: #EBDCFD; /* 背景粉色 */
+    color: #000000;             /* 字体紫色 */
+    border-color: #FFBADA;
+}
+
+h5 {
+font-family: "Libre Baskerville", serif;
+  font-size: 30px;
+}
+
+p {
+ font-family: 'Playfair Display', serif;
+  font-size: 24px;
+}
+
+body {
+background-color: #000000; 
+}
+
+:root {
+    --purple: #000000;
+    --blue: rgba(0, 0, 0, 0.96);
+    color: #ffffff;
+}
+.email-box {
+  width: 405px;        
+}
+
+.email-box .form-control {
+  border-radius: 24px; 
+     padding: 14px 18px;
+}
+.custom-image-row .col {
+    flex: 0 0 auto; /* 不自动拉伸，保持内容原始大小 */
+    width: auto;    /* 宽度由图片决定 */
+    padding: 0;
+}
+
+/* 确保 row 抵消掉边缘多出来的 padding，防止整体不居中 */
+.custom-image-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* 这就是你想要的 40px 距离 */
+    flex-wrap: nowrap; /* 确保它们在一行，不换行 */
+}
+
+.custom-btn {
+    background-color: transparent; /* 默认透明 */
+    color: white; /* 字体白色 */
+    border: none; /* 没有边框 */
+    transition: background-color 0.3s, color 0.3s; /* 平滑过渡效果 */
+}
+
+.custom-btn:hover {
+    background-color: #FF9CC6; /* 鼠标悬停时背景色 */
+    color: black; /* 字体颜色变黑，和背景形成对比 */
+  
+}
+
+
+.btn-custom {
+    background-color: var(--purple);
+    color: purple;
+}
+.navbar {
+    background-color: var(--purple);
+}
+
+.footer {
+    background-color: var(--blue);
+    color: #ffffff;
+}
+h5 {
+color: #EBDCFD; /
+}
+p {
+color: #FFA0C6; /* Change the color of the `<p>` element */
+}
+
+.wrapper {
+    position: relative;
+    overflow: hidden;
+    border: none;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 50px;
+}
+
+/* 图片保持原始大小 */
+.wrapper img {
+   display: block;
+    width: 100%;      /* 让图片填满格子 */
+    height: auto;     /* 保持比例 */
+    max-width: 100%
+}
+
+/* 底部覆盖背景 */
+.wrapper:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    background-color: #FFBADA;
+    bottom: -40%;          /* 初始隐藏 */
+    left: 0;
+    transition: bottom 0.5s;
+    z-index: 1;
+}
+
+/* hover 时上升背景 */
+.wrapper:hover:before {
+    bottom: 0;
+}
+
+
+/* 文字也初始隐藏，和背景同步 */
+.text-wrapper {
+    position: absolute;
+    bottom: -40%;           /* 初始隐藏 */
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    z-index: 2;
+    text-align: center;
+    transition: bottom 0.5s; /* 动画同步 */
+}
+
+/* hover 时文字跟随背景上升 */
+.wrapper:hover .text-wrapper {
+    bottom: 0;
+}
+
+
+.front,
+.back {
+    position: absolute;
+    backface-visibility: hidden;
+}
+.flipcard img {
+    aspect-ratio: 1/1;
+}
+.back {
+    transform: rotatey(180deg);
+}
+.section2{
+    aspect-ratio: 1400/900;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 40px 0;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    position: relative;   /* 保持默认文档流 */
+    z-index: 2;           /* 确保在 banner 上方 */
+    margin-top: -22%;     
+}
+
+
+
+/* 确保容器不会超出 Banner 范围 */
+.section-banner {
+    overflow: hidden;
+}
+
+/* 让覆盖在上面的 row 宽度自适应 */
+.section-banner .container {
+    width: 100%;
+    z-index: 5;
+}
+
+.section-banner {
+    margin-top: 40px;
+}
+
+/* 如果图片颜色太亮，可以给文字加个阴影或者半透明背景 */
+.about-text {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 增加文字可读性 */
+    margin-bottom: 0;
+}
+
+/* 针对手机端的适配 */
+@media (max-width: 768px) {
+    .section-banner .about-text {
+        font-size: 16px; /* 手机端缩小字体 */
+    }
+    .section-banner .container {
+        position: relative !important; /* 手机端如果放不下，可以恢复相对定位 */
+        top: 0 !important;
+        left: 0 !important;
+        transform: none !important;
+        background-color: #000; /* 手机端背景变黑 */
+        padding: 20px;
+    }
+}
+
+.custom-btn {
+    font-family: 'Playfair Display', serif; /* 使用 Google Font */
+  font-size: 20px;
+}
+
+.company-btn {
+    display: block;            /* 每个按钮独占一行 */
+    width: 150px;              /* 改成你想要的短宽度 */
+    margin: 10px auto;          /* 居中并加间距 */
+    text-align: center;
+    padding: 6px 12px;         /* 按钮内边距 */
+    border-radius: 50px;       /* 圆角按钮 */
+    background-color: transparent;
+    color: #FFBADA;               /* 默认文字白色 */
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+}
+
+/* hover / 点击效果 */
+.company-btn:hover,
+.company-btn:active {
+    background-color: #EBDCFD; /* 背景粉色 */
+    color: #000000;             /* 字体紫色 */
+    border-color: #FFBADA;
+}
+
+h5 {
+font-family: "Libre Baskerville", serif;
+  font-size: 30px;
+}
+
+p {
+ font-family: 'Playfair Display', serif;
+  font-size: 24px;
+}
+
+
+
+:root {
+    --purple: #000000;
+    --blue: rgba(0, 0, 0, 0.96);
+    color: #ffffff;
+}
+.email-box {
+  width: 405px;        
+}
+
+.email-box .form-control {
+  border-radius: 24px; 
+     padding: 14px 18px;
+}
+
+
+
+.btn-custom {
+    background-color: var(--purple);
+    color: purple;
+}
+  
+.footer {
+    background-color: var(--blue);
+    color: #ffffff;
+}
+h5 {
+color: #EBDCFD; /
+}
+p {
+color: #FFA0C6; /* Change the color of the `<p>` element */
+}
+
+
+/* section lip */
+.lipstick-section {
+  margin-bottom: 370px;
+}
+
+.footer {
+  position: relative;
+  margin-top: 0;
+  padding-top: 60px;
+}
+
+
+
+.footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 40px 0;
+  margin-top: 120px;   /* 拉开跟口红的距离 */
+  padding-top: 60px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    position: relative;   /* 保持默认文档流 */
+    z-index: 2;           /* 确保在 banner 上方 */
+    margin-top: -22%;     
+}
+
+
+
+/* Desktop / Default */
+.class {
+    font-size: 20px;
+    padding: 40px;
+}
+
+/* iPad size */
+@media screen and (max-width: 991px) {
+    .class {
+        font-size: 18px;
+        padding: 30px;
+    }
+}
+
+/* iPhone size */
+@media screen and (max-width: 767px) {
+    .class {
+        font-size: 16px;
+        padding: 20px;
+    }
+}

@@ -1,0 +1,693 @@
+.custom-btn {
+    font-family: 'Playfair Display', serif; /* 使用 Google Font */
+  font-size: 20px;
+}
+h5 {
+font-family: "Libre Baskerville", serif;
+  font-size: 30px;
+}
+
+p {
+ font-family: 'Playfair Display', serif;
+  font-size: 24px;
+}
+
+.product-stack {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 300px; /* 重要：给最后一张卡片留出滚动空间 */
+}
+.product-stack-container {
+  transform: translateY(-78px);
+  
+}
+
+
+
+.stack-box {
+    width: 100%;
+    height: 70vh; /* 建议给一个固定高度，效果更明显 */
+    position: sticky;
+    /* 下面这些 top 值要和之前的 ID 选择器配合 */
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    padding: 60px 40px;
+    box-shadow: 0 -15px 35px rgba(0,0,0,0.3);
+    margin-bottom: 10vh; /* 增加间距，让滚动感更强 */
+}
+
+/* 修正：让每一层卡片停在不同的位置，露出上面的标题 */
+#card-1 { z-index: 1; top: 100px; }
+#card-2 { z-index: 2; top: 160px; }
+#card-3 { z-index: 3; top: 220px; }
+#card-4 { z-index: 4; top: 280px; }
+#card-5 { z-index: 4; top: 280px; }
+
+/* 辅助样式：确保文字可见 */
+.stack-header h3 {
+    font-family: "Libre Baskerville", serif;
+    font-weight: bold;
+}
+
+/* 容器需要有足够的底边距，否则最后一张卡片推不上去 */
+.product-stack-container {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 20vh; /* 留出底部空间 */
+}
+
+.stack-box {
+    width: 100%;
+    min-height: 85vh; /* 增加高度，确保内容装得下 */
+    position: -webkit-sticky;
+    position: sticky;
+    border-radius: 50px 50px 0 0;
+    padding: 60px 40px;
+    box-shadow: 0 -15px 35px rgba(0,0,0,0.3);
+    /* 重点：margin-bottom 不能太大，否则下一张卡片滑上来太慢 */
+    margin-bottom: 5vh; 
+}
+
+#card-1 { top: 60px;  z-index: 1; background-color: #000000; color: #333; }
+#card-2 { top: 60px;  z-index: 1; background-color: #EBDCFD; color: #333; }
+#card-3 { top: 120px; z-index: 2; background-color: #000000; color: #fff; }
+#card-4 { top: 180px; z-index: 3; background-color: #ff99bb; color: #fff; }
+#card-5 { top: 240px; z-index: 4; background-color: #e2c6ff; color: #333; }
+
+
+/* 整个卡片（黑色外卡） */
+.stack-box {
+  background: #0e0e0e;
+  border-radius: 36px;
+  padding: 60px 0;      /* 👈 只上下有黑色 */
+  overflow: hidden;
+}
+
+
+/* 中间那块（图片卡片） */
+.stack-box .container {
+   position: relative;
+  background-image: url("product.jpg");
+  background-size: cover;            /* 左右一定填满 */
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 28px;
+  padding: 60px;
+  color: #fff;
+
+  /* 👇 关键：左右贴死 */
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* 外层卡片：黑色底色 */
+#card-1 {
+   background-color: #000000 !important; /* 确保背景是黑色 */
+    padding: 0 !important;               /* 清除父级间距，让图片能顶边 */
+    position: sticky;
+    top: 60px;
+    overflow: hidden;
+}
+
+#card-1 .container {
+  position: relative;
+    background-image: url("brand1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 60vh !important; 
+    
+    /* 依然保留滚动功能 */
+    overflow-y: auto; 
+    
+    /* 隐藏滚动条 (针对 Firefox) */
+    scrollbar-width: none; 
+    /* 隐藏滚动条 (针对 IE/Edge) */
+    -ms-overflow-style: none; 
+
+    margin-top: 0 !important;
+    margin-bottom: 40px !important;
+    padding: 40px 80px !important;
+    color: #fff !important;
+    border-radius: 0;
+    
+}
+
+/* 标题：定位在顶部的黑色区域 */
+#card-1 .stack-title {
+   position: relative;        /* 或者是 absolute */
+    padding: 30px 0 20px 50px; /* 这个高度决定了顶部黑色区域的大小 */
+    margin: 0;
+    color: #ffffff;
+    font-size: 2.2rem;
+    background-color: #000;
+}
+
+/* 照片层：左右填满，上下露出黑色 */
+
+
+/* 文字阴影：确保在照片上看得清 */
+#card-1 .stack-body-content p {
+    color: #ffffff;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+
+}
+
+#card-2 {
+   background-color: #EBDCFD !important; /* 确保背景是黑色 */
+    padding: 0 !important;               /* 清除父级间距，让图片能顶边 */
+    position: sticky;
+    top: 60px;
+    overflow: hidden;
+}
+
+#card-2 .container {
+  position: relative;
+    background-image: url("brand2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 60vh !important; 
+    
+    /* 依然保留滚动功能 */
+    overflow-y: auto; 
+    
+    /* 隐藏滚动条 (针对 Firefox) */
+    scrollbar-width: none; 
+    /* 隐藏滚动条 (针对 IE/Edge) */
+    -ms-overflow-style: none; 
+
+    margin-top: 0 !important;
+    margin-bottom: 40px !important;
+    padding: 40px 80px !important;
+    color: #fff !important;
+    border-radius: 0;
+}
+
+#card-2 .container::-webkit-scrollbar {
+    display: none;
+}
+    
+
+
+/* 标题：定位在顶部的黑色区域 */
+#card-2 .stack-title {
+  position: relative;        /* 或者是 absolute */
+    padding: 30px 0 20px 50px; /* 这个高度决定了顶部黑色区域的大小 */
+    margin: 0;
+    color: #000000;
+    font-size: 2.2rem;
+    background-color: #EBDCFD;
+}
+
+/* 照片层：左右填满，上下露出黑色 */
+
+
+/* 文字阴影：确保在照片上看得清 */
+#card-2 .stack-body-content p {
+    color: #0f0e0e;
+  
+
+}
+
+
+
+#card-3 {
+   background-color: #000000 !important; /* 确保背景是黑色 */
+    padding: 0 !important;               /* 清除父级间距，让图片能顶边 */
+    position: sticky;
+    top: 60px;
+    overflow: hidden;
+}
+
+#card-3 .container {
+  position: relative;
+    background-image: url("brand3.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 60vh !important; 
+    
+    /* 依然保留滚动功能 */
+    overflow-y: auto; 
+    
+    /* 隐藏滚动条 (针对 Firefox) */
+    scrollbar-width: none; 
+    /* 隐藏滚动条 (针对 IE/Edge) */
+    -ms-overflow-style: none; 
+
+    margin-top: 0 !important;
+    margin-bottom: 40px !important;
+    padding: 40px 80px !important;
+    color: #fff !important;
+    border-radius: 0;
+    
+}
+
+/* 标题：定位在顶部的黑色区域 */
+#card-3 .stack-title {
+   position: relative;        /* 或者是 absolute */
+    padding: 30px 0 20px 50px; /* 这个高度决定了顶部黑色区域的大小 */
+    margin: 0;
+    color: #ffffff;
+    font-size: 2.2rem;
+    background-color: #000;
+}
+
+/* 照片层：左右填满，上下露出黑色 */
+
+
+/* 文字阴影：确保在照片上看得清 */
+#card-3 .stack-body-content p {
+    color: #ffffff;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+
+}
+
+
+
+#card-4 {
+   background-color: #FF9CC6 !important; /* 确保背景是黑色 */
+    padding: 0 !important;               /* 清除父级间距，让图片能顶边 */
+    position: sticky;
+    top: 60px;
+    overflow: hidden;
+}
+
+#card-4 .container {
+  position: relative;
+    background-image: url("brand4.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 60vh !important; 
+    
+    /* 依然保留滚动功能 */
+    overflow-y: auto; 
+    
+    /* 隐藏滚动条 (针对 Firefox) */
+    scrollbar-width: none; 
+    /* 隐藏滚动条 (针对 IE/Edge) */
+    -ms-overflow-style: none; 
+
+    margin-top: 0 !important;
+    margin-bottom: 40px !important;
+    padding: 40px 80px !important;
+    color: #fff !important;
+    border-radius: 0;
+    
+}
+
+/* 标题：定位在顶部的黑色区域 */
+#card-4 .stack-title {
+   position: relative;        /* 或者是 absolute */
+    padding: 30px 0 20px 50px; /* 这个高度决定了顶部黑色区域的大小 */
+    margin: 0;
+    color: #000000;
+    font-size: 2.2rem;
+    background-color: #FF9CC6;
+}
+
+/* 照片层：左右填满，上下露出黑色 */
+
+
+/* 文字阴影：确保在照片上看得清 */
+#card-4 .stack-body-content p {
+    color: #ffffff;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+
+}
+
+#card-5 {
+   background-color: #DFC7FC !important; /* 确保背景是黑色 */
+    padding: 0 !important;               /* 清除父级间距，让图片能顶边 */
+    position: sticky;
+    top: 60px;
+    overflow: hidden;
+}
+
+#card-5 .container {
+  position: relative;
+    background-image: url("brand5.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 60vh !important; 
+    
+    /* 依然保留滚动功能 */
+    overflow-y: auto; 
+    
+    /* 隐藏滚动条 (针对 Firefox) */
+    scrollbar-width: none; 
+    /* 隐藏滚动条 (针对 IE/Edge) */
+    -ms-overflow-style: none; 
+
+    margin-top: 0 !important;
+    margin-bottom: 40px !important;
+    padding: 40px 80px !important;
+    color: #fff !important;
+    border-radius: 0;
+    
+}
+
+/* 标题：定位在顶部的黑色区域 */
+#card-5 .stack-title {
+   position: relative;        /* 或者是 absolute */
+    padding: 30px 0 20px 50px; /* 这个高度决定了顶部黑色区域的大小 */
+    margin: 0;
+    color: #000000;
+    font-size: 2.2rem;
+    background-color: #DFC7FC;
+}
+
+/* 照片层：左右填满，上下露出黑色 */
+
+
+/* 文字阴影：确保在照片上看得清 */
+#card-5 .stack-body-content p {
+    color: #ffffff;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+
+}
+
+
+
+body {
+ margin: 0;
+  min-height: 203vh;
+  /* 平滑渐变：从纯黑到灰色 */
+  background: linear-gradient(to bottom, #000000, #666666);
+}
+
+body {
+  margin: 0;
+  min-height: 203vh;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.98),
+    rgba(102, 102, 102, 0.95)
+  );
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.7); /* 半透明黑色背景 */
+}
+
+:root {
+    --purple: #000000;
+    --blue: rgba(0, 0, 0, 0.96);
+    color: #ffffff;
+}
+.email-box {
+  width: 405px;        
+}
+
+.email-box .form-control {
+  border-radius: 24px; 
+     padding: 14px 18px;
+    
+}
+.custom-btn {
+    background-color: transparent; /* 默认透明 */
+    color: white; /* 字体白色 */
+    border: none; /* 没有边框 */
+    transition: background-color 0.3s, color 0.3s; /* 平滑过渡效果 */
+}
+
+.custom-btn:hover {
+    background-color: #FF9CC6; /* 鼠标悬停时背景色 */
+    color: black; /* 字体颜色变黑，和背景形成对比 */
+  
+}
+
+
+.btn-custom {
+    background-color: var(--purple);
+    color: purple;
+}
+.navbar {
+    background-color: var(--purple);
+}
+
+.footer {
+    background-color: var(--blue);
+    color: #ffffff;
+}
+h5 {
+color: #EBDCFD; /
+}
+p {
+color: #FFA0C6; /* Change the color of the `<p>` element */
+}
+
+
+.custom-btn {
+    font-family: 'Playfair Display', serif; /* 使用 Google Font */
+  font-size: 20px;
+}
+
+.company-btn {
+    display: block;            /* 每个按钮独占一行 */
+    width: 150px;              /* 改成你想要的短宽度 */
+    margin: 10px auto;          /* 居中并加间距 */
+    text-align: center;
+    padding: 6px 12px;         /* 按钮内边距 */
+    border-radius: 50px;       /* 圆角按钮 */
+    background-color: transparent;
+    color: #FFBADA;               /* 默认文字白色 */
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+}
+
+/* hover / 点击效果 */
+.company-btn:hover,
+.company-btn:active {
+    background-color: #EBDCFD; /* 背景粉色 */
+    color: #000000;             /* 字体紫色 */
+    border-color: #FFBADA;
+}
+
+h5 {
+font-family: "Libre Baskerville", serif;
+  font-size: 30px;
+}
+
+p {
+ font-family: 'Playfair Display', serif;
+  font-size: 24px;
+}
+
+
+
+:root {
+    --purple: #000000;
+    --blue: rgba(0, 0, 0, 0.96);
+    color: #ffffff;
+}
+.email-box {
+  width: 405px;        
+}
+
+.email-box .form-control {
+  border-radius: 24px; 
+     padding: 14px 18px;
+}
+
+
+
+.btn-custom {
+    background-color: var(--purple);
+    color: purple;
+}
+  
+.footer {
+    background-color: var(--blue);
+    color: #ffffff;
+}
+h5 {
+color: #EBDCFD; /
+}
+p {
+color: #FFA0C6; /* Change the color of the `<p>` element */
+}
+
+
+/* section lip */
+.lipstick-section {
+  margin-bottom: 370px;
+}
+
+.footer {
+  position: relative;
+  margin-top: 0;
+  padding-top: 60px;
+}
+
+.custom-btn {
+    background-color: transparent; /* 默认透明 */
+    color: white; /* 字体白色 */
+    border: none; /* 没有边框 */
+    transition: background-color 0.3s, color 0.3s; /* 平滑过渡效果 */
+}
+
+.custom-btn:hover {
+    background-color: #FF9CC6; /* 鼠标悬停时背景色 */
+    color: black; /* 字体颜色变黑，和背景形成对比 */
+}
+
+/* dropdown 整体 */
+.dropdown-menu {
+  background-color: #000;
+  border-radius: 0;
+  padding: 0;
+  border: none;
+  min-width: 220px;
+}
+
+/* dropdown item 默认 */
+.dropdown-item {
+  color: #fff;
+  background-color: transparent;
+  padding: 14px 20px;
+  padding-left: 24px;   /* 对齐 PRODUCT */
+  text-align: left;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+/* hover / active */
+.dropdown-item:hover,
+.dropdown-item:focus,
+.dropdown-item.active {
+  background-color: #000;
+  color: #ff9cc6;
+}
+
+/* 防止 bootstrap active 变白 */
+.dropdown-item:active {
+  background-color: #000 !important;
+  color: #ff9cc6 !important;
+}
+
+/* PRODUCT 打开时高亮 */
+.nav-item.dropdown.show > .custom-btn {
+  background-color: #ff9cc6;
+  color: black;
+}
+
+/* 移除箭头 */
+.dropdown-toggle::after {
+  display: none;
+}
+
+/* 当 dropdown 展开时，让 PRODUCT 变白色 */
+.dropdown-toggle.show {
+  background-color: #ff9cc6;
+  color: black !important;
+}
+
+.navbar .custom-btn  {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 400; /* regular = 400 */
+}
+
+.dropdown-item {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+}
+
+/* navbar到这里结束啦yeahhh */
+
+/* 1. 只有 HOME 和 FAQ 使用悬停显示，不碰 PRODUCT */
+@media (min-width: 992px) {
+    .custom-hover:hover .dropdown-menu {
+        display: block !important;
+        margin-top: 0;
+    }
+}
+
+/* 2. 针对 BRAND SERVICE 和 REVIEW 的点击颜色 */
+/* 当鼠标按下去的一瞬间，以及点击后获得焦点时变粉色 */
+.dropdown-item.pink-item:active,
+.dropdown-item.pink-item:focus {
+    background-color: #000 !important; /* 背景保持黑色 */
+    color: #FF9CC6 !important;        /* 文字变粉色 */
+}
+
+/* 如果你希望在 BRAND.html 页面时，那个字一直是粉色的 */
+/* 你需要在 BRAND.html 的代码里给那个 a 标签手动加上 active 类 */
+.dropdown-item.pink-item.active {
+    color: #FF9CC6 !important;
+    background-color: #000 !important;
+}
+/* COPY 到这里 */
+
+.footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 40px 0;
+  margin-top: 1017px;   /* 拉开跟口红的距离 */
+  padding-top: 60px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    position: relative;   /* 保持默认文档流 */
+    z-index: 2;           /* 确保在 banner 上方 */
+    margin-top: -22%;     
+}
+.front,
+.back {
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+
+.back {
+    transform: rotatey(180deg);
+}
+.section2{
+    aspect-ratio: 1400/500;
+}
+
+
+
+
+/* Desktop / Default */
+.class {
+    font-size: 20px;
+    padding: 40px;
+}
+
+/* iPad size */
+@media screen and (max-width: 991px) {
+    .class {
+        font-size: 18px;
+        padding: 30px;
+    }
+}
+
+/* iPhone size */
+@media screen and (max-width: 767px) {
+    .class {
+        font-size: 16px;
+        padding: 20px;
+    }
+}
