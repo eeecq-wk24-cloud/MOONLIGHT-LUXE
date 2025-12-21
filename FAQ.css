@@ -136,27 +136,27 @@ color: #FFA0C6; /* Change the color of the `<p>` element */
 
 /* 每一张“乱放” */
 .d1 {
-  top: -1131px;
-  left: 245px;
+  top: -188px;
+  left: 1304px;
   transform: rotate(-10deg);
 }
 
 .d2 {
-  top: -482px;
+  top: -647px;
   right: 1096px;
-  transform: rotate(93deg);
+  transform: rotate(276deg);
 }
 
 .d3 {
-  top: -517px;
-  left: 1096px;
+  top: -684px;
+  left: 1206px;
   transform: rotate(5deg);
 }
 
 .d4 {
-  bottom: 600px;
-  right: 200px;
-  transform: rotate(-12deg);
+  bottom: 443px;
+  right: 1293px;
+  transform: rotate(636deg);
 }
 
 .custom-btn {
