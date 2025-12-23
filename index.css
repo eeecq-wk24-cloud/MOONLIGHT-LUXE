@@ -73,6 +73,26 @@
   font-size: 24px;
 }
 
+/* 只有在电脑端（大屏幕）才开启悬停效果 */
+@media (min-width: 768px) {
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* 防止鼠标移出间隙导致菜单消失 */
+  }
+}
+
+/* 确保下拉菜单背景和文字颜色正确 */
+.dropdown-menu-dark {
+  background-color: #000 !important;
+  border: 1px solid #333;
+}
+
+.dropdown-item:hover {
+  background-color: #ff69b4 !important; /* 悬停颜色 */
+  color: white !important;
+}
+
+
 /* navbar到这里结束啦yeahhh */
 
 

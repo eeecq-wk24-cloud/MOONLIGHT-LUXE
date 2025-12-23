@@ -22,6 +22,37 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="LIP%20MAKEUP%20%20g.css" />
+        、<style>
+  /* --- 导航栏背景 --- */
+  .bg-black { background-color: #000 !important; }
+
+
+
+  /* --- 关键：滑鼠滑过去时的效果 (出现粉色框框和粉色文字) --- */
+  .custom-btn:hover {
+    color: #000000 !important;          /* 文字变粉色 */
+    background-color:#FF9CC6 !important; /* 背景依然不要颜色 */
+  }
+
+
+  .dropdown-item:hover {
+    color: #FF9CC6 !important;
+    background-color: transparent !important;
+  }
+
+  /* --- 电脑端自动显示下拉菜单 --- */
+  @media (min-width: 768px) {
+    .nav-item.dropdown:hover > .dropdown-menu {
+      display: block !important;
+      margin-top: 0; 
+    }
+  }
+
+  .dropdown-menu-dark {
+    background-color: #000 !important;
+    border: 1px solid #333;
+  }
+</style>
     </head>
 
     <body>
@@ -62,17 +93,11 @@
 
           <!-- HOME -->
          <li class="nav-item dropdown">
-  <a class="btn custom-btn rounded-pill px-4 py-2 dropdown-toggle"
-     href="#"
-     role="button"
-     data-bs-toggle="dropdown"
-     aria-expanded="false">
+  <a class="btn custom-btn rounded-pill px-4 py-2" href="index.html">
     HOME
   </a>
-  <ul class="dropdown-menu">
-    <li>
-      <a class="dropdown-item pink-link" href="BRAND.html">BRAND SERVICE</a>
-    </li>
+  <ul class="dropdown-menu dropdown-menu-dark">
+    <li><a class="dropdown-item" href="BRAND.html">BRAND SERVICE</a></li>
   </ul>
 </li>
  <!-- CONTACT -->
@@ -110,18 +135,12 @@
          
 
           <!-- FAQ -->
-         <li class="nav-item dropdown">
-  <a class="btn custom-btn rounded-pill px-4 py-2 dropdown-toggle"
-     href="#"
-     role="button"
-     data-bs-toggle="dropdown"
-     aria-expanded="false">
+    <li class="nav-item dropdown">
+  <a class="btn custom-btn rounded-pill px-4 py-2 dropdown-toggle" href="FAQ.html" role="button">
     FAQ
   </a>
-  <ul class="dropdown-menu">
-    <li>
-      <a class="dropdown-item pink-link" href="REVIEW.html">REVIEW</a>
-    </li>
+  <ul class="dropdown-menu dropdown-menu-dark">
+    <li><a class="dropdown-item" href="REVIEW.html">REVIEW</a></li>
   </ul>
 </li>
 

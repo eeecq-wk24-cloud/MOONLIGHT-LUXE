@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
+      <link href="https://fonts.googleapis.com/css2?family=Forum&family=Libre+Baskerville&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Moonlight Light FAQ</title>
         <link
@@ -22,6 +23,52 @@
             referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="FAQ.css" />
         <link href="https://fonts.googleapis.com/css2?family=Forum&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+      <style>
+  /* 只改问题按钮里的文字：字体 Libre Baskerville，大小 24 */
+  .accordion-button {
+    font-family: 'Libre Baskerville', serif !important;
+    font-size: 20px !important;
+    /* 保持原有的按钮布局和背景不被覆盖 */
+  }
+
+  /* 只改展开后的内容文字：字体 Forum，大小 20 */
+  .accordion-body {
+    font-family: 'Forum', serif !important;
+    font-size: 20px !important;
+    /* 这里的 text-black, fs-3 等 Bootstrap 类会被这个样式覆盖 */
+  }
+</style>
+      <style>
+  /* --- 导航栏背景 --- */
+  .bg-black { background-color: #000 !important; }
+
+
+
+  /* --- 关键：滑鼠滑过去时的效果 (出现粉色框框和粉色文字) --- */
+  .custom-btn:hover {
+    color: #000000 !important;          /* 文字变粉色 */
+    background-color:#FF9CC6 !important; /* 背景依然不要颜色 */
+  }
+
+
+  .dropdown-item:hover {
+    color: #FF9CC6 !important;
+    background-color: transparent !important;
+  }
+
+  /* --- 电脑端自动显示下拉菜单 --- */
+  @media (min-width: 768px) {
+    .nav-item.dropdown:hover > .dropdown-menu {
+      display: block !important;
+      margin-top: 0; 
+    }
+  }
+
+  .dropdown-menu-dark {
+    background-color: #000 !important;
+    border: 1px solid #333;
+  }
+</style>
     </head>
     <body>
          <!--Navigation Bar-->
@@ -61,17 +108,11 @@
 
           <!-- HOME -->
          <li class="nav-item dropdown">
-  <a class="btn custom-btn rounded-pill px-4 py-2 dropdown-toggle"
-     href="#"
-     role="button"
-     data-bs-toggle="dropdown"
-     aria-expanded="false">
+  <a class="btn custom-btn rounded-pill px-4 py-2" href="index.html">
     HOME
   </a>
-  <ul class="dropdown-menu">
-    <li>
-      <a class="dropdown-item pink-link" href="BRAND.html">BRAND SERVICE</a>
-    </li>
+  <ul class="dropdown-menu dropdown-menu-dark">
+    <li><a class="dropdown-item" href="BRAND.html">BRAND SERVICE</a></li>
   </ul>
 </li>
 
@@ -110,17 +151,11 @@
 
           <!-- FAQ -->
          <li class="nav-item dropdown">
-  <a class="btn custom-btn rounded-pill px-4 py-2 dropdown-toggle"
-     href="#"
-     role="button"
-     data-bs-toggle="dropdown"
-     aria-expanded="false">
+  <a class="btn custom-btn rounded-pill px-4 py-2 dropdown-toggle" href="FAQ.html" role="button">
     FAQ
   </a>
-  <ul class="dropdown-menu">
-    <li>
-      <a class="dropdown-item pink-link" href="REVIEW.html">REVIEW</a>
-    </li>
+  <ul class="dropdown-menu dropdown-menu-dark">
+    <li><a class="dropdown-item" href="REVIEW.html">REVIEW</a></li>
   </ul>
 </li>
 
@@ -170,8 +205,8 @@
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingOne">
       <button class="accordion-button collapsed justify-content-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-    <img src="Down%20Button.png" alt="arrow" class="accordion-img">
-          FAQ 1: What skin types is this foundation suitable for?
+        <img src="Down%20Button.png" alt="arrow" class="accordion-img">
+       What skin types is this foundation suitable for?
       </button>
     </h2>
     <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
@@ -179,7 +214,7 @@
         This foundation is suitable for most skin types, including normal, dry, and combination skin.
       </div>
     </div>
-  </div>
+</div>
 
   <!-- FAQ 2 -->
   <div class="accordion-item">
